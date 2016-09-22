@@ -18,17 +18,17 @@
 		</div>
 <!--Album art-->
 	<div id="aa" class="item">
-			<img class="fadeIn" src="audio1.png" width="200px" height="200px" onclick="Play('http://anything2mp3.com/system/files/mp3/%EC%97%90%EC%BD%94_Antistrophe_274087418_soundcloud.mp3')">
+			<img class="fadeIn" src="audio1.png" width="200px" height="200px" onclick="Play('https://www.dropbox.com/s/gvokge3234l3idy/Antistrophe.mp3')">
 			<span class="caption fadeIn">Echo | Antistrophe</span>			
 	</div>
 
 	<div id="ab" class="item">
-			<img class="fadeIn2" src="audio2.png" width="200px" height="200px" onclick="Play2('http://anything2mp3.com/system/files/mp3/POLAND.%201948.%20_HOME_263968315_soundcloud.mp3')">
+			<img class="fadeIn2" src="audio2.png" width="200px" height="200px" onclick="Play2('https://www.dropbox.com/s/wlnqkjmt6rzrzms/poland.mp3')">
 			<span class="caption fadeIn2">POLAND.1948//HOME</span>			
 	</div>
 
 	<div id="ac" class="item">
-			<img class="fadeIn3" src="audio3.png" width="200px" height="200px" onclick="Play3('http://anything2mp3.com/system/files/mp3/Anima_273574378_soundcloud.mp3')">
+			<img class="fadeIn3" src="audio3.png" width="200px" height="200px" onclick="Play3('https://www.dropbox.com/s/wb9744ipii2hdmn/Anima.mp3')">
 			<span class="caption fadeIn3">Anima</span>
 	</div>
 <!--Audio-->
@@ -61,15 +61,15 @@ function Play(audioFile)
 		 	console.log(x.paused);
 		 } 
 		 
-		if (x.paused == true) 
+		if (x.paused == false) 
 		{
             console.log('play');
-            x.play();
+            x.pause();
         } 
         else 
         {
             console.log('pause');
-            x.pause();
+            x.play();
         }
                
 }
