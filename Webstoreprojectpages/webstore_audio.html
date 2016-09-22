@@ -18,23 +18,28 @@
 		</div>
 <!--Album art-->
 	<div id="aa" class="item">
-			<img class="fadeIn" src="audio1.png" width="200px" height="200px" onclick="Play('https://www.dropbox.com/s/gvokge3234l3idy/Antistrophe.mp3')">
+			<img class="fadeIn" src="audio1.png" width="200px" height="200px" onclick="audio1.paused?audio1.play():audio1.pause()">
 			<span class="caption fadeIn">Echo | Antistrophe</span>			
 	</div>
 
 	<div id="ab" class="item">
-			<img class="fadeIn2" src="audio2.png" width="200px" height="200px" onclick="Play2('https://www.dropbox.com/s/wlnqkjmt6rzrzms/poland.mp3')">
+			<img class="fadeIn2" src="audio2.png" width="200px" height="200px" onclick="audio2.paused?audio2.play():audio2.pause()">
 			<span class="caption fadeIn2">POLAND.1948//HOME</span>			
 	</div>
 
 	<div id="ac" class="item">
-			<img class="fadeIn3" src="audio3.png" width="200px" height="200px" onclick="Play3('https://www.dropbox.com/s/wb9744ipii2hdmn/Anima.mp3')">
+			<img class="fadeIn3" src="audio3.png" width="200px" height="200px" onclick="audio3.paused?audio3.play():audio3.pause()">
 			<span class="caption fadeIn3">Anima</span>
 	</div>
 <!--Audio-->
-<audio id="audio1"></audio>
-<audio id="audio2"></audio>
-<audio id="audio3"></audio>	
+<audio id="audio1" src="file:///Users/jonathaneyster/Desktop/fundamentals/Webstore%20project/Antistrophe.mp3""></audio>
+<a onClick="document.getElementById('audio1').play"> </a>
+
+<audio id="audio2" src="file:///Users/jonathaneyster/Desktop/fundamentals/Webstore%20project/poland.mp3"></audio>
+<a onClick="document.getElementById('audio2').play"> </a>
+
+<audio id="audio3" src="file:///Users/jonathaneyster/Desktop/fundamentals/Webstore%20project/Anima.mp3"></audio>
+<a onClick="document.getElementById('audio3').play"> </a>	
 <!--Back-->	
 	<div class="h2" style="text-align:center; color:#ffffff; font-size: 12px; margin-top:10%">
 			<h1>
@@ -52,65 +57,5 @@
     	</video>
 	</div>
 <!--Javascript-->	
-<script type="text/javascript">
-function Play(audioFile)
-{
-	var x = document.getElementById("audio1");
-	 if (!x.src || x.src !== audioFile) x.src = audioFile;
- 	 	{
-		 	console.log(x.paused);
-		 } 
-		 
-		if (x.paused == false) 
-		{
-            console.log('play');
-            x.pause();
-        } 
-        else 
-        {
-            console.log('pause');
-            x.play();
-        }
-               
-}
-
-function Play2(audioFile)
-{
-	var y= document.getElementById("audio2");
-		if (!y.src || y.src !== audioFile) y.src = audioFile; 
-		{
-			console.log(y.paused);
-		}
-        if (y.paused == false) 
-        {
-            console.log('pause');
-            y.pause();
-        } 
-        else 
-        {
-            console.log('play');
-            y.play();
-        }
-}	
-
-function Play3(audioFile)
-{
-	var z= document.getElementById("audio3");
-		if (!z.src || z.src !== audioFile) z.src = audioFile; 
-		{
-			console.log(z.paused);
-		}
-        if (z.paused == false) 
-        {
-            console.log('pause');
-            z.pause();
-        } 
-        else 
-        {
-            console.log('play');
-            z.play();
-        }
-}	
-</script>
 </body>
 </html>
