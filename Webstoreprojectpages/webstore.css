@@ -1,0 +1,170 @@
+@font-face { 
+  font-family: 'ostrich-sans';
+  src: url('ostrich-sans/ostrich-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@-webkit-keyframes fadeIn 
+{ 
+  from 
+  { 
+    opacity:0; 
+  } 
+  to 
+  { 
+    opacity:.7; 
+  }
+}
+@-webkit-keyframes fadeInVideo 
+{ 
+  from 
+  { 
+    opacity:0; 
+  } 
+  to 
+  { 
+    opacity:.7; 
+  }
+}
+@-webkit-keyframes fadeInHeader 
+{ 
+  from 
+  { 
+    opacity:0; 
+  } 
+  to 
+  { 
+    opacity:.1; 
+  }
+}
+
+.bgv_0
+{
+    -webkit-filter:grayscale(0%);
+    -webkit-filter:blur(1px);
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    opacity: 0;
+    -webkit-animation:fadeInVideo ease-in 1;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -webkit-animation-delay: 0s;
+}
+
+.bgv_1
+{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-animation:fadeInVideo ease-in 1;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-duration:1s;
+    -webkit-animation-delay: 0s;
+}
+
+#h1
+{
+    text-shadow: 2px 5px 2px #000000; 
+    position: fixed;
+}
+
+.h2
+{
+
+    font-family: ostrich-sans;
+    text-align: center; 
+    position: absolute; 
+    top: 25%; 
+    bottom: 75%; 
+    width: 100%;
+    opacity: 0;
+    -webkit-animation:fadeIn ease-in 1;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-duration:1.5s;
+    -webkit-animation-delay: 1s;
+}
+
+
+.sidenav 
+{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    opacity: 1;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px; /* Place content 60px from the top */
+    transition: 1.0s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav a 
+{
+    padding: 24px 8px 24px 50px;
+    text-decoration: none;
+    font-size: 45px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus
+{
+    color: #f1f1f1;
+}
+.sidenav .closebtn 
+{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main 
+{
+    transition: margin-left .5s;
+    padding: 20px;
+}
+.fadeInHeader
+{
+  opacity: 0;
+  -webkit-animation:fadeIn ease-in 1;
+  -webkit-animation-fill-mode:forwards;
+  -webkit-animation-duration:1.5s;
+  -webkit-animation-delay: .7s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

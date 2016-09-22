@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html style="background-color:#000000">
+<head>
+	<title>fundamentals.audio</title>
+	<link rel="stylesheet" type="text/css" href="webstore_audio.css">
+</head>
+<body>
+<!--Text-->	
+	<div class="htext">
+		<h1 class="h2" id="h1" style="font-family:Verdana, Geneva, sans-serif; color:#ffffff; font-size:30px; text-indent:25px">
+			<i>audio.</i>
+		</h1>
+	</div>
+	<div class="h2" style="text-align:center; color:#ffffff; font-size: 24px">
+			<h1 > 
+				<a href="https://soundcloud.com/jonathaneyster" target="blank">S O U N D C L O U D</a>
+			</h1>
+		</div>
+<!--Album art-->
+	<div id="aa" class="item">
+			<img class="fadeIn" src="audio1.png" width="200px" height="200px" onclick="Play('file:https://raw.githubusercontent.com/jonathaneyster/fundamentals/tree/master/Webstore%20project/Antistrophe.mp3')">
+			<span class="caption fadeIn">Echo | Antistrophe</span>			
+	</div>
+
+	<div id="ab" class="item">
+			<img class="fadeIn2" src="audio2.png" width="200px" height="200px" onclick="Play2('file:file:https://raw.githubusercontent.com/jonathaneyster/fundamentals/tree/master/Webstore%20project/poland.mp3')">
+			<span class="caption fadeIn2">POLAND.1948//HOME</span>			
+	</div>
+
+	<div id="ac" class="item">
+			<img class="fadeIn3" src="audio3.png" width="200px" height="200px" onclick="Play3('file:https://raw.githubusercontent.com/jonathaneyster/fundamentals/tree/master/Webstore%20project/Anima.mp3')">
+			<span class="caption fadeIn3">Anima</span>
+	</div>
+<!--Audio-->
+<audio id="audio1"></audio>
+<audio id="audio2"></audio>
+<audio id="audio3"></audio>	
+<!--Back-->	
+	<div class="h2" style="text-align:center; color:#ffffff; font-size: 12px; margin-top:10%">
+			<h1>
+				<span class="backbutton">
+					<a href="webstore.html">b a c k<a>
+				</span> 	
+			</h1>
+		</div>		
+<!--Animation-->
+	<div class="bgv_0">
+    	<video loop muted autoplay class="bgv_1">
+        	<source src="storm_converted.webm" type="video/webm">
+        	<!--<source src="file:///Users/jonathaneyster/Desktop/fundamentals/Webstore%20project/spiritedaway.mp4" type="video/mp4">
+        	<source src="file:///Users/jonathaneyster/Desktop/fundamentals/Webstore%20project/spiritedaway.ogv" type="video/ogv">-->
+    	</video>
+	</div>
+<!--Javascript-->	
+<script type="text/javascript">
+function Play(audioFile)
+{
+	var x = document.getElementById("audio1");
+	 if (!x.src || x.src !== audioFile) x.src = audioFile;
+ 	 	{
+		 	console.log(x.paused);
+		 } 
+		 
+		if (x.paused == true) 
+		{
+            console.log('play');
+            x.play();
+        } 
+        else 
+        {
+            console.log('pause');
+            x.pause();
+        }
+               
+}
+
+function Play2(audioFile)
+{
+	var y= document.getElementById("audio2");
+		if (!y.src || y.src !== audioFile) y.src = audioFile; 
+		{
+			console.log(y.paused);
+		}
+        if (y.paused == false) 
+        {
+            console.log('pause');
+            y.pause();
+        } 
+        else 
+        {
+            console.log('play');
+            y.play();
+        }
+}	
+
+function Play3(audioFile)
+{
+	var z= document.getElementById("audio3");
+		if (!z.src || z.src !== audioFile) z.src = audioFile; 
+		{
+			console.log(z.paused);
+		}
+        if (z.paused == false) 
+        {
+            console.log('pause');
+            z.pause();
+        } 
+        else 
+        {
+            console.log('play');
+            z.play();
+        }
+}	
+</script>
+</body>
+</html>
